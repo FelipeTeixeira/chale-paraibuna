@@ -5,6 +5,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
 ## [Não publicado]
 
+## [1.8.0] - 2026-06-11
+
+### ✨ Adicionado
+- **Seção 8 nova:** "Plantas Baixas do Projeto"
+- Planta v1 (Chalé 6×4m) renderizada como PNG e adicionada ao site
+- Imagem `imagens/planta-v1.png` (renderizada via Playwright)
+- **3 blocos de observação destacados:**
+  - ✅ Verde: o que o Felipe gosta na v1 (zona molhada concentrada, banheira com vista, cozinha em torre compacta)
+  - ⚠️ Vermelho: pontos de melhoria (distância pés-vidro de 1,67m está longe demais)
+  - 💡 Azul: decisões pendentes sobre a banheira (madeira/ofurô vs design moderno sem madeira)
+- Bloco "Outras versões disponíveis" listando v2, v4, v5, v6 e P2
+
 ## [1.7.0] - 2026-06-08
 
 ### ✨ Adicionado
