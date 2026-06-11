@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chalé Paraibuna · Ideias e Referências</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f4f1ec;
+    color: #2a2a2a;
+    line-height: 1.6;
+    padding: 40px 20px;
+  }
+
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 60px 50px;
+    border-radius: 4px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+  }
+
+  .header {
+    border-bottom: 2px solid #2a4a3a;
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 42px;
+    color: #2a4a3a;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #6a6a6a;
+  }
+
+  .meta {
+    font-size: 13px;
+    color: #6a6a6a;
+    margin-top: 14px;
+  }
+
+  /* Checklist dos 10 links */
+  .checklist-links {
+    background: linear-gradient(135deg, #2a4a3a 0%, #1a3a2a 100%);
+    color: #fff;
+    padding: 28px 32px;
+    border-radius: 6px;
+    margin: 32px 0 24px;
+    box-shadow: 0 4px 14px rgba(42,74,58,0.15);
+  }
+
+  .checklist-links h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .checklist-intro {
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+
+  .checklist {
+    list-style: none;
+    counter-reset: chk;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 18px;
+  }
+
+  .checklist li {
+    counter-increment: chk;
+    padding: 6px 0;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.95);
+    position: relative;
+    padding-left: 24px;
+    line-height: 1.4;
+  }
+
+  .checklist li::before {
+    content: counter(chk);
+    position: absolute;
+    left: 0;
+    top: 6px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .checklist a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+    border-bottom: 1px dotted rgba(255,255,255,0.4);
+    padding-bottom: 1px;
+  }
+
+  .checklist a:hover {
+    color: #c8dde2;
+    border-bottom-color: #c8dde2;
+  }
+
+  .checklist a::after {
+    content: " ↗";
+    opacity: 0.6;
+    font-size: 11px;
+  }
+
+  /* Índice */
+  .indice {
+    background: #f9f7f3;
+    padding: 24px 28px;
+    border-left: 4px solid #2a4a3a;
+    margin: 32px 0 48px;
+    border-radius: 2px;
+  }
+
+  .indice h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: #2a4a3a;
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+
+  .indice ol {
+    list-style: none;
+    counter-reset: idx;
+  }
+
+  .indice li {
+    counter-increment: idx;
+    padding: 4px 0;
+    font-size: 14px;
+    color: #4a4a4a;
+  }
+
+  .indice li::before {
+    content: counter(idx) ". ";
+    color: #2a4a3a;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+
+  .indice a {
+    color: #4a4a4a;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .indice a:hover {
+    color: #2a8fa8;
+  }
+
+  /* Seções */
+  section {
+    margin-bottom: 56px;
+  }
+
+  h2.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: #2a4a3a;
+    font-weight: 500;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e8e4dd;
+  }
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: #8a6e4a;
+    font-weight: 500;
+    margin: 28px 0 10px;
+  }
+
+  .intro {
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-bottom: 18px;
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  ul.itens {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul.itens > li {
+    padding: 8px 0 8px 20px;
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #2a2a2a;
+    position: relative;
+  }
+
+  ul.itens > li::before {
+    content: "·";
+    position: absolute;
+    left: 6px;
+    color: #2a4a3a;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  ul.itens > li b, ul.itens > li strong {
+    color: #2a4a3a;
+  }
+
+  /* Links — abrem em nova aba */
+  a.ref-link {
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 6px 14px;
+    background: #f0f5f7;
+    border: 1px solid #c8dde2;
+    border-radius: 4px;
+    color: #2a8fa8;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  a.ref-link:hover {
+    background: #2a8fa8;
+    color: #fff;
+    border-color: #2a8fa8;
+    transform: translateX(2px);
+  }
+
+  a.ref-link::before {
+    content: "🔗 ";
+    margin-right: 4px;
+  }
+
+  a.ref-link::after {
+    content: " ↗";
+    margin-left: 4px;
+    opacity: 0.7;
+  }
+
+  /* Bloco de referência (texto + link + imagens) */
+  .ref-bloco {
+    background: #fbf9f5;
+    padding: 20px 22px;
+    border-left: 3px solid #8a6e4a;
+    border-radius: 4px;
+    margin: 16px 0 24px;
+  }
+
+  .ref-bloco-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: #8a6e4a;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .ref-bloco-texto {
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  /* Galeria de imagens */
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+    margin: 14px 0 6px;
+  }
+
+  .galeria.um {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .galeria.dois {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .galeria.tres {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: zoom-in;
+    background: #f0ece4;
+    aspect-ratio: 4/3;
+  }
+
+  .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+  }
+
+  .img-box:hover img {
+    transform: scale(1.05);
+  }
+
+  .img-box .img-legenda {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+    color: #fff;
+    padding: 14px 10px 6px;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .img-box:hover .img-legenda {
+    opacity: 1;
+  }
+
+  /* Tabela resumo */
+  table.resumo {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+    font-size: 13.5px;
+  }
+
+  table.resumo thead {
+    background: #2a4a3a;
+    color: #fff;
+  }
+
+  table.resumo th {
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  table.resumo tbody tr {
+    background: #f9f7f3;
+    border-bottom: 1px solid #e8e4dd;
+  }
+
+  table.resumo tbody tr:hover {
+    background: #f0ece4;
+  }
+
+  table.resumo td {
+    padding: 12px 14px;
+    line-height: 1.5;
+  }
+
+  table.resumo td:first-child {
+    font-weight: 600;
+    color: #8a6e4a;
+    width: 32%;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    cursor: zoom-out;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .lightbox.aberto {
+    display: flex;
+  }
+
+  .lightbox img {
+    max-width: 95%;
+    max-height: 95vh;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  .lightbox-fechar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 36px;
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid #e8e4dd;
+    font-size: 12px;
+    color: #8a8a8a;
+    text-align: center;
+  }
+
+  /* Responsivo */
+  @media (max-width: 600px) {
+    body { padding: 20px 10px; }
+    .container { padding: 32px 22px; }
+    h1 { font-size: 30px; }
+    h2.section-title { font-size: 22px; }
+    a.ref-link { word-break: break-all; }
+    .galeria { grid-template-columns: 1fr 1fr; }
+    .galeria.tres { grid-template-columns: 1fr 1fr; }
+    .checklist { grid-template-columns: 1fr; }
+    .checklist-links { padding: 22px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <h1>Chalé Paraibuna</h1>
+    <div class="subtitle">Ideias, referências e diretrizes de projeto</div>
+    <div class="meta">Reserva Altos das Laranjeiras · Gleba 14 · 4,56 hectares</div>
+  </header>
+
+  <div class="checklist-links">
+    <h2>📋 17 Referências do documento</h2>
+    <p class="checklist-intro">Todos os links de referência estão presentes. Clique em qualquer um para abrir em nova aba.</p>
+    <ol class="checklist">
+      <li><a href="https://www.instagram.com/reel/DFJFw8LJkKW/" target="_blank" rel="noopener noreferrer">⭐ Instagram · OKA Prime (Okahauss) — referência principal</a></li>
+      <li><a href="https://www.instagram.com/reel/DXJzi8KBTCe/" target="_blank" rel="noopener noreferrer">✅ Instagram · Telhado perfeito (duas águas baixas)</a></li>
+      <li><a href="https://www.airbnb.com.br/rooms/1370564096050648829" target="_blank" rel="noopener noreferrer">💡 Airbnb · Pé-direito alto pontual (só onde tem banheira)</a></li>
+      <li><a href="https://www.airbnb.com.br/rooms/53540620" target="_blank" rel="noopener noreferrer">Airbnb · Jaguatirica (planta perfeita)</a></li>
+      <li><a href="https://www.airbnb.com.br/rooms/1662408751783688039" target="_blank" rel="noopener noreferrer">Airbnb · Pé-direito alto + vidro inteiro</a></li>
+      <li><a href="https://www.airbnb.com.br/rooms/948560950102277681" target="_blank" rel="noopener noreferrer">Airbnb · Telhado com forro de madeira + pedras</a></li>
+      <li><a href="https://www.airbnb.com.br/rooms/1200082710154180175" target="_blank" rel="noopener noreferrer">Airbnb · Mesma vista de qualquer lugar</a></li>
+      <li><a href="https://www.airbnb.com.br/rooms/856988103039715109" target="_blank" rel="noopener noreferrer">Airbnb · Mesa eucalipto + balanço no deck</a></li>
+      <li><a href="https://www.airbnb.com.br/rooms/1545860003821165124" target="_blank" rel="noopener noreferrer">Airbnb · Banheira na ponta + cadeira eucalipto</a></li>
+      <li><a href="https://www.airbnb.com.br/rooms/1262133672024592491" target="_blank" rel="noopener noreferrer">Airbnb · Cozinha pequena em pedra</a></li>
+      <li><a href="https://www.booking.com/hotel/cr/villas-paramo-cloud-forest.pt-br.html" target="_blank" rel="noopener noreferrer">Booking · Villas Páramo Cloud Forest (cerca)</a></li>
+      <li><a href="https://www.instagram.com/p/C8MzSyotiML/" target="_blank" rel="noopener noreferrer">Instagram · Separação de chalés</a></li>
+      <li><a href="https://www.booking.com/hotel/in/monticle-glamps.pt-br.html" target="_blank" rel="noopener noreferrer">Booking · Monticle Glamps (divisão dos campos)</a></li>
+      <li><a href="https://www.airbnb.com.br/rooms/17124407" target="_blank" rel="noopener noreferrer">Airbnb · Deck de madeira vertical</a></li>
+      <li><a href="https://www.instagram.com/reel/DWpRgB5DiRd/" target="_blank" rel="noopener noreferrer">Instagram · Área comum dos chalés</a></li>
+      <li><a href="https://www.airbnb.com/l/2TjD0yVP" target="_blank" rel="noopener noreferrer">Airbnb · Estrutura aparente + bastante gramado em volta</a></li>
+      <li><a href="https://www.instagram.com/reel/DWrIMHixPTI/" target="_blank" rel="noopener noreferrer">💰 Instagram · Dicas de economia em materiais</a></li>
+    </ol>
+  </div>
+
+  <nav class="indice">
+    <h2>Índice</h2>
+    <ol>
+      <li><a href="#sec1">Estrutura e Arquitetura</a></li>
+      <li><a href="#sec2">Fachada, Vidros e Telhado</a></li>
+      <li><a href="#sec3">Áreas Externas: Deck, Banheira e Lazer</a></li>
+      <li><a href="#sec4">Cozinha</a></li>
+      <li><a href="#sec5">Conjunto de Chalés e Paisagismo</a></li>
+      <li><a href="#sec6">Mobiliário e Detalhes Locais</a></li>
+      <li><a href="#sec7">Materiais e Economia · Acabamentos Inteligentes</a></li>
+      <li><a href="#resumo">Resumo das Diretrizes</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============================ SEÇÃO 1 ============================ -->
+  <section id="sec1">
+    <h2 class="section-title">1. Estrutura e Arquitetura</h2>
+    <p class="intro">Diretrizes gerais sobre o volume, a planta e a inspiração principal do chalé.</p>
+
+    <div class="ref-bloco" style="border-left-color: #2a8fa8; background: #f0f5f7;">
+      <div class="ref-bloco-titulo" style="color: #2a8fa8;">⭐ OKA Prime (Okahauss) — Referência principal</div>
+      <div class="ref-bloco-texto">
+        <strong>Gostei da arquitetura cheia de vidro</strong>, do tamanho do chalé,
+        da <strong>cama bem próxima do vidro</strong> e da <strong>banheira com vista</strong>.
+        Volume horizontal moderno com fachada toda envidraçada, palafita visível, 
+        cobertura de pergolado bioclimático com lâminas, cama king encostada na 
+        fachada de vidro pra ter vista deitado e banheira posicionada também
+        com vista pra paisagem.
+      </div>
+      <a class="ref-link" href="https://www.instagram.com/reel/DFJFw8LJkKW/" target="_blank" rel="noopener noreferrer">Instagram · OKA Prime / Okahauss</a>
+
+      <div class="galeria um">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_25.png')">
+          <img src="imagens/foto_25.png" alt="OKA Prime - chalé moderno com vidro e banheira com vista">
+          <div class="img-legenda">OKA Prime · arquitetura cheia de vidro · cama e banheira com vista</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Planta perfeita — Chalé Jaguatirica (Pitta Arquitetura, Ubatuba)</div>
+      <div class="ref-bloco-texto">
+        Espaço considerado perfeito, com volume linear alongado, cozinha em linha,
+        mesa de jantar comprida, banco verde estofado, cama paralela ao vidro com
+        banco-janela atrás da cabeceira, portas sanfonadas ripadas estilo shoji
+        e ofurô externo no deck. <strong>Fazer a planta igual a ele.</strong>
+        Na fachada desenhar uma marquise ou algo do tipo pra ficar bonito.
+      </div>
+      <a class="ref-link" href="https://www.airbnb.com.br/rooms/53540620" target="_blank" rel="noopener noreferrer">Airbnb · Chalé Jaguatirica (Ubatuba)</a>
+
+      <div class="galeria tres">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_13.png')">
+          <img src="imagens/foto_13.png" alt="Jaguatirica vista externa">
+          <div class="img-legenda">Fachada na mata atlântica em palafita</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_17.png')">
+          <img src="imagens/foto_17.png" alt="Interior Jaguatirica com ofurô">
+          <div class="img-legenda">Cama com vista pra mata + ofurô externo no deck</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_11.png')">
+          <img src="imagens/foto_11.png" alt="Quarto com banco-janela">
+          <div class="img-legenda">Quarto com banco-janela atrás da cabeceira</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SEÇÃO 2 ============================ -->
+  <section id="sec2">
+    <h2 class="section-title">2. Fachada, Vidros e Telhado</h2>
+    <p class="intro">Elementos visíveis na fachada principal e na cobertura.</p>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Frente de vidro inteiro + pé-direito alto</div>
+      <div class="ref-bloco-texto">
+        "Achei legal essa frente de vidro inteiro, essa divisória em cima fica
+        legal também, esse pé-direito um pouco mais alto. Legal o vidro em
+        quadrado fixo e depois a porta de correr grande, porém com a parte fixa."
+      </div>
+      <a class="ref-link" href="https://www.airbnb.com.br/rooms/1662408751783688039" target="_blank" rel="noopener noreferrer">Airbnb · Pé-direito alto + vidro inteiro</a>
+
+      <div class="galeria">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_03.png')">
+          <img src="imagens/foto_03.png" alt="Banheira com vista panorâmica">
+          <div class="img-legenda">Banheira hidro + vista panorâmica + pé-direito alto</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_14.png')">
+          <img src="imagens/foto_14.png" alt="Quarto com vidro alto">
+          <div class="img-legenda">Vidro alto com vista pra montanhas + cortinas</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_19.png')">
+          <img src="imagens/foto_19.png" alt="Fachada vidro duas alturas">
+          <div class="img-legenda">Fachada vidro de duas alturas + porta de correr</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_07.png')">
+          <img src="imagens/foto_07.png" alt="Chalé com telhado plano">
+          <div class="img-legenda">Palafita com vidros tipo shoji em sequência</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_21.png')">
+          <img src="imagens/foto_21.png" alt="Quarto com banheira no canto">
+          <div class="img-legenda">Quarto com banheira oval no canto + vista panorâmica</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Telhado bonito com forro de madeira + pedras passando</div>
+      <div class="ref-bloco-texto">
+        "Telhado bonito com forro de madeira e frente do jeito que queremos.
+        Telhado lateral bonito, e as pedras ali passando do telhado também."
+      </div>
+      <a class="ref-link" href="https://www.airbnb.com.br/rooms/948560950102277681" target="_blank" rel="noopener noreferrer">Airbnb · Telhado com forro de madeira + pedras</a>
+
+      <div class="galeria">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_22.png')">
+          <img src="imagens/foto_22.png" alt="Telhado borboleta madeira aparente">
+          <div class="img-legenda">Telhado em borboleta + madeira aparente + pedras</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_15.png')">
+          <img src="imagens/foto_15.png" alt="Chalé noturno pedras retroiluminadas">
+          <div class="img-legenda">Pedras retroiluminadas à noite + jardim passando</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_06.png')">
+          <img src="imagens/foto_06.png" alt="Sala com pedras passando">
+          <div class="img-legenda">Pedras passando + vista pra serra</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_09.png')">
+          <img src="imagens/foto_09.png" alt="Spa com parede de pedras">
+          <div class="img-legenda">Spa quadrado com parede de pedras + iluminação noturna</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Telhado bonito · uma água parcial com forro de madeira (design assimétrico)</div>
+      <div class="ref-bloco-texto">
+        Referência de <strong>telhado em uma água inclinado</strong> (telha branca/clara)
+        com uma característica de design <strong>diferente e bacana</strong>:
+        <strong>o telhado não cobre o chalé inteiro</strong>. Ele se ergue apenas sobre uma
+        parte do volume (a zona da cama, criando o pé-direito alto), enquanto a outra
+        parte da casa fica com cobertura mais baixa. Isso cria um <strong>volume assimétrico
+        com 2 alturas diferentes</strong>, e o telhado inclinado sobressai do resto da
+        construção como elemento de destaque arquitetônico.
+      </div>
+      <div class="ref-bloco-texto" style="background: #f0f5f7; padding: 14px 16px; border-left: 3px solid #2a8fa8; border-radius: 4px; margin-top: 12px;">
+        <strong style="color: #2a8fa8;">💡 Detalhe do design:</strong>
+        por dentro, a geometria angulada cria um <strong>forro de madeira cênico</strong>
+        com vários planos. A zona sob o telhado alto vira protagonista do espaço
+        (quarto/sala), enquanto a zona de cobertura baixa fica mais aconchegante
+        (cozinha/banheiro). Combinação perfeita de <strong>impacto externo + forro
+        interno + variação de pé-direito</strong>. Luminárias de trilho fixadas nas
+        vigas reforçam o desenho do teto.
+      </div>
+
+      <div class="galeria dois">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_27.png')">
+          <img src="imagens/foto_27.png" alt="Telhado uma água assimétrico com telha branca">
+          <div class="img-legenda">Externo · telhado em uma água cobrindo SÓ parte do volume (assimétrico) + palafita + deck com piscina</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_28.png')">
+          <img src="imagens/foto_28.png" alt="Forro de madeira interior cênico">
+          <div class="img-legenda">Interno · forro de madeira aparente com planos angulados + luminárias de trilho</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-bloco" style="border-left-color: #2a8fa8; background: #f0f5f7;">
+      <div class="ref-bloco-titulo" style="color: #2a8fa8;">✅ Telhado perfeito · duas águas baixas + beirais avançados (APROVADO!)</div>
+      <div class="ref-bloco-texto">
+        <strong>Telhado perfeito.</strong> Configuração em <strong>duas águas baixas e
+        largas</strong> que caem pros lados (silhueta de "asa de pássaro" ou borboleta
+        invertida suave), com <strong>beirais bem avançados</strong> sobre o deck e as
+        laterais. O ponto mais alto fica no centro, criando <strong>pé-direito duplo</strong>
+        com janelas altas pra ventilação cruzada e entrada de luz. Fachada totalmente
+        envidraçada com esquadrias pretas finas, estrutura aparente de madeira clara
+        avermelhada. Estilo tropical-moderno (lembra Bali), mas funciona perfeito pra
+        clima de serra também.
+      </div>
+      <div class="ref-bloco-texto" style="background: #fff; padding: 14px 16px; border-left: 3px solid #2a8fa8; border-radius: 4px; margin-top: 12px;">
+        <strong style="color: #2a8fa8;">Por que esse telhado é perfeito:</strong>
+        <ul style="list-style: none; padding-left: 0; margin-top: 8px;">
+          <li style="padding: 3px 0;">· <strong>Beirais avançados</strong> protegem a fachada de vidro do sol direto e da chuva (essencial pra durabilidade do vidro)</li>
+          <li style="padding: 3px 0;">· <strong>Pé-direito duplo no centro</strong> dá amplitude e permite janelas altas pra ventilação cruzada</li>
+          <li style="padding: 3px 0;">· <strong>Duas águas baixas</strong> são mais elegantes que telhado convencional e mais simples que telhado borboleta clássico</li>
+          <li style="padding: 3px 0;">· <strong>Estrutura aparente de madeira</strong> vira destaque visual interno (forro cênico)</li>
+          <li style="padding: 3px 0;">· <strong>Compatível com a OKA Prime</strong> (referência principal) — substitui o pergolado bioclimático por algo mais durável e tradicional</li>
+          <li style="padding: 3px 0;">· <strong>Custo menor que pergolado bioclimático</strong> com impacto visual igual ou maior</li>
+        </ul>
+      </div>
+      <a class="ref-link" href="https://www.instagram.com/reel/DXJzi8KBTCe/" target="_blank" rel="noopener noreferrer">Instagram · Telhado perfeito (duas águas baixas)</a>
+
+      <div class="galeria um">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_31.png')">
+          <img src="imagens/foto_31.png" alt="Telhado perfeito - duas águas baixas com beirais avançados">
+          <div class="img-legenda">Telhado em duas águas baixas + beirais avançados + pé-direito duplo + fachada de vidro + estrutura de madeira aparente</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-bloco" style="border-left-color: #c89a4a; background: #fdf8ef;">
+      <div class="ref-bloco-titulo" style="color: #8a6e4a;">💡 Pé-direito alto pontual · só onde tem a banheira (estratégia econômica)</div>
+      <div class="ref-bloco-texto">
+        <strong>Insight inteligente:</strong> em vez de fazer a casa inteira com telhado
+        alto (que custa caro), <strong>elevar o telhado APENAS em um trecho</strong>
+        — por exemplo, sobre a área da banheira ou da cama. O resto da casa fica com
+        pé-direito normal, e o vão alto vira <strong>elemento de destaque visual</strong>.
+      </div>
+      <div class="ref-bloco-texto" style="background: #fff; padding: 14px 16px; border-left: 3px solid #c89a4a; border-radius: 4px; margin-top: 12px;">
+        <strong style="color: #8a6e4a;">Por que funciona:</strong>
+        <ul style="list-style: none; padding-left: 0; margin-top: 8px;">
+          <li style="padding: 3px 0;">· <strong>Chama atenção e cria foco visual</strong> sem precisar elevar a casa toda</li>
+          <li style="padding: 3px 0;">· <strong>Barato de fazer:</strong> só uma elevação localizada na estrutura do telhado</li>
+          <li style="padding: 3px 0;">· <strong>Funcional:</strong> o vão alto dá amplitude pra zona da banheira (a mais "instagramável")</li>
+          <li style="padding: 3px 0;">· <strong>Versátil:</strong> pode receber revestimento de destaque (sobras de troncos, microcimento, parede verde)</li>
+          <li style="padding: 3px 0;">· <strong>Eficiência térmica:</strong> só a área do vão alto perde temperatura (resto da casa mantém aconchego)</li>
+          <li style="padding: 3px 0;">· <strong>Combina com telhado perfeito:</strong> o vão alto pode ser uma das duas águas levantada</li>
+        </ul>
+      </div>
+      <div class="ref-bloco-texto" style="margin-top: 10px;">
+        <strong>Aplicação na planta v6 (OKA Prime):</strong>
+      </div>
+      <ul class="itens" style="margin-top: 0;">
+        <li><strong>Zona Quarto + Banheira</strong> (lado direito da v6) → recebe o pé-direito alto</li>
+        <li><strong>Zona Social e Zona Banheiro+Hall</strong> → pé-direito normal (2,50m)</li>
+        <li>Transição visual marcada pelo telhado de duas águas (perfeito + econômico)</li>
+        <li>O <strong>revestimento de sobras de troncos</strong> (foto 32) pode preencher o vão alto, criando um painel de destaque</li>
+      </ul>
+      <a class="ref-link" href="https://www.airbnb.com.br/rooms/1370564096050648829" target="_blank" rel="noopener noreferrer">Airbnb · Pé-direito alto pontual</a>
+
+      <div class="galeria um">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_33.jpeg')">
+          <img src="imagens/foto_33.jpeg" alt="Casa com vão alto pontual em um trecho do telhado">
+          <div class="img-legenda">Chalé com vão alto pontual em UM trecho do telhado + rede + pergolado lateral + paisagismo natural</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Mesma vista de qualquer lugar</div>
+      <div class="ref-bloco-texto">
+        "Mas legal desse de qualquer lugar você tem sempre a mesma vista, bem bacana."
+        Continuidade panorâmica em todo o chalé.
+      </div>
+      <a class="ref-link" href="https://www.airbnb.com.br/rooms/1200082710154180175" target="_blank" rel="noopener noreferrer">Airbnb · Vista contínua</a>
+
+      <div class="galeria tres">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_04.png')">
+          <img src="imagens/foto_04.png" alt="Chalé horizontal vidro + ofurô deck">
+          <div class="img-legenda">Chalé horizontal com cama no vidro + ofurô madeira no deck</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_20.png')">
+          <img src="imagens/foto_20.png" alt="Vista aérea noturna">
+          <div class="img-legenda">Fachada inteira de vidro + piscina lateral</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_10.png')">
+          <img src="imagens/foto_10.png" alt="Chalé A-frame preto">
+          <div class="img-legenda">Chalé A-frame moderno com torre vertical</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SEÇÃO 3 ============================ -->
+  <section id="sec3">
+    <h2 class="section-title">3. Áreas Externas: Deck, Banheira e Lazer</h2>
+    <p class="intro">Configuração do deck, posicionamento da banheira/ofurô e elementos de descanso ao ar livre.</p>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Deck de madeira vertical (tábuas perpendiculares à fachada)</div>
+      <div class="ref-bloco-texto">
+        Deck com tábuas de madeira no <strong>sentido vertical</strong>
+        (perpendiculares à fachada, indo em direção à vista) em vez do tradicional
+        horizontal. O efeito visual é de um "tapete" de madeira que estica e
+        amplia o deck, conduzindo o olhar pra paisagem. Detalhe de design forte
+        em chalés de montanha.
+      </div>
+      <div class="ref-bloco-texto" style="background: #f0f5f7; padding: 14px 16px; border-left: 3px solid #2a8fa8; border-radius: 4px; margin-top: 12px;">
+        <strong style="color: #2a8fa8;">💡 Insight importante:</strong>
+        com esse formato de deck vertical, <strong>a banheira pode ficar dentro do
+        próprio chalé</strong> e mesmo assim ter vista totalmente desimpedida.
+        Como as tábuas correm em direção à vista, não tem deck na frente da
+        banheira bloqueando a paisagem. Isso flexibiliza o projeto: a regra
+        "banheira na ponta do deck" deixa de ser obrigatória, e a banheira
+        pode voltar pra dentro da casa sem perder a vista.
+      </div>
+      <a class="ref-link" href="https://www.airbnb.com.br/rooms/17124407" target="_blank" rel="noopener noreferrer">Airbnb · Deck vertical com vista panorâmica</a>
+
+      <div class="galeria dois">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_23.png')">
+          <img src="imagens/foto_23.png" alt="Deck vertical com vista panorâmica">
+          <div class="img-legenda">Deck com tábuas verticais conduzindo o olhar pra vista da serra</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_24.png')">
+          <img src="imagens/foto_24.png" alt="Deck vertical na entrada do chalé">
+          <div class="img-legenda">Mesma técnica na passarela de acesso · deck vertical preto + madeira escura</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Mesa eucalipto + balanço no deck</div>
+      <div class="ref-bloco-texto">
+        <strong>Fazer a mesa com o próprio eucalipto da fazenda.</strong><br>
+        <strong>Balanço no próprio deck da casa</strong>, avaliar se é melhor fazer
+        na lateral (privacidade individual) ou uma área comum pra todos.
+      </div>
+      <a class="ref-link" href="https://www.airbnb.com.br/rooms/856988103039715109" target="_blank" rel="noopener noreferrer">Airbnb · Mesa eucalipto + balanço</a>
+
+      <div class="galeria dois">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_01.png')">
+          <img src="imagens/foto_01.png" alt="Mesa eucalipto live edge">
+          <div class="img-legenda">Mesa live edge de eucalipto + cadeiras de madeira</div>
+        </div>
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_16.png')">
+          <img src="imagens/foto_16.png" alt="Chalé com luzes em cordão no deck">
+          <div class="img-legenda">Deck com luzes em cordão à noite (balanço/lazer)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Banheira na ponta do deck + cadeira eucalipto + design em conjunto</div>
+      <div class="ref-bloco-texto">
+        <strong>Regra importante:</strong> se o deck for de madeira, a banheira
+        precisa ficar na <strong>ponta de tudo</strong>. Onde estiver a banheira,
+        não terá deck na frente dela.<br>
+        Legal design dos chalés em conjunto. <strong>Cadeira de madeira com eucalipto.</strong>
+      </div>
+      <a class="ref-link" href="https://www.airbnb.com.br/rooms/1545860003821165124" target="_blank" rel="noopener noreferrer">Airbnb · Banheira na ponta + cadeira eucalipto</a>
+
+      <div class="galeria um">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_18.png')">
+          <img src="imagens/foto_18.png" alt="A-frame com banheira na ponta">
+          <div class="img-legenda">Chalé A-frame com banheira na ponta do volume</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SEÇÃO 4 ============================ -->
+  <section id="sec4">
+    <h2 class="section-title">4. Cozinha</h2>
+    <p class="intro">Soluções para a cozinha externa/interna e detalhes funcionais simples.</p>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Pequena pedra com cozinha simples</div>
+      <div class="ref-bloco-texto">
+        "Pequena pedra com coisas de cozinha, com torneira, coisas simples e
+        fáceis de fazer." Conceito minimalista para preparo rápido.
+      </div>
+      <a class="ref-link" href="https://www.airbnb.com.br/rooms/1262133672024592491" target="_blank" rel="noopener noreferrer">Airbnb · Cozinha simples de pedra</a>
+
+      <div class="galeria um">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_05.png')">
+          <img src="imagens/foto_05.png" alt="Bancada preta minimalista">
+          <div class="img-legenda">Bancada preta minimalista + parede verde escuro + espelho redondo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SEÇÃO 5 ============================ -->
+  <section id="sec5">
+    <h2 class="section-title">5. Conjunto de Chalés e Paisagismo</h2>
+    <p class="intro">Como dispor os chalés no terreno e tratar separações, cercas e divisões dos campos.</p>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Cerca — Villas Páramo Cloud Forest (Costa Rica)</div>
+      <div class="ref-bloco-texto">
+        <strong>"Fazer cerca assin"</strong> (anotação parcial no doc original).
+      </div>
+      <a class="ref-link" href="https://www.booking.com/hotel/cr/villas-paramo-cloud-forest.pt-br.html" target="_blank" rel="noopener noreferrer">Booking · Villas Páramo Cloud Forest</a>
+
+      <div class="galeria um">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_02.png')">
+          <img src="imagens/foto_02.png" alt="Cerca de troncos verticais">
+          <div class="img-legenda">Cerca de troncos verticais (palanques) como divisória</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Separação de chalés</div>
+      <div class="ref-bloco-texto">
+        <strong>Separação de chalés bonito.</strong> Modelo de separação bonita
+        entre unidades.
+      </div>
+      <a class="ref-link" href="https://www.instagram.com/p/C8MzSyotiML/" target="_blank" rel="noopener noreferrer">Instagram · Separação de chalés</a>
+
+      <div class="galeria um">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_12.png')">
+          <img src="imagens/foto_12.png" alt="Chalés escalonados">
+          <div class="img-legenda">Chalés escalonados na encosta · cores terrosas + telhado verde</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Divisão dos campos — Monticle Glamps (Índia)</div>
+      <div class="ref-bloco-texto">
+        <strong>Divisão dos campos</strong> seguindo modelo do Monticle Glamps.
+      </div>
+      <a class="ref-link" href="https://www.booking.com/hotel/in/monticle-glamps.pt-br.html" target="_blank" rel="noopener noreferrer">Booking · Monticle Glamps</a>
+
+      <div class="galeria um">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_08.png')">
+          <img src="imagens/foto_08.png" alt="Monticle Glamps em plantação de chá">
+          <div class="img-legenda">Chalés tipo cabana em plantação de chá nas montanhas</div>
+        </div>
+      </div>
+    </div>
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Área comum dos chalés · fogueira + cadeiras Adirondack</div>
+      <div class="ref-bloco-texto">
+        Referência de <strong>área comum noturna compartilhada</strong> entre os chalés.
+        Configuração ao redor de uma <strong>fogueira central</strong> em piso de pedrisco/seixos
+        brancos, com <strong>cadeiras Adirondack de madeira</strong> dispostas em círculo e
+        <strong>luzes em cordão (varal de lâmpadas)</strong> sustentadas por mourões verticais
+        de madeira. Espaço perfeito pra convivência à noite, especialmente em clima frio
+        de serra. Esse modelo decide a discussão do "balanço": melhor colocar elementos
+        de lazer (fogueira, balanço, churrasqueira) em <strong>uma área comum centralizada</strong>
+        ao invés de duplicar em cada chalé.
+      </div>
+      <a class="ref-link" href="https://www.instagram.com/reel/DWpRgB5DiRd/" target="_blank" rel="noopener noreferrer">Instagram · Área comum com fogueira (@rickmirandaoficial e @vitoriapravato_)</a>
+
+      <div class="galeria um">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_26.png')">
+          <img src="imagens/foto_26.png" alt="Área comum com fogueira central e cadeiras Adirondack">
+          <div class="img-legenda">Fogueira central + cadeiras Adirondack + varal de luzes + piso de pedrisco</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Estrutura do deck · esconder ou deixar aparente?</div>
+      <div class="ref-bloco-texto">
+        Referência de chalé em palafita onde a <strong>estrutura debaixo do deck fica
+        APARENTE</strong> (pilares brancos visíveis + base de concreto). Geralmente em
+        chalés a estrutura inferior é escondida com revestimento, mas dependendo do
+        desenho arquitetônico <strong>deixar aparente pode ficar mais bonito</strong>
+        e dar identidade visual ao volume — uma possibilidade pra avaliar com o arquiteto.
+        Aqui o chalé tem desenho cúbico moderno em branco e madeira, fachada de vidro
+        com cortinas brancas e teto de madeira aparente na varanda.
+      </div>
+      <div class="ref-bloco-texto" style="background: #f0f5f7; padding: 14px 16px; border-left: 3px solid #2a8fa8; border-radius: 4px; margin-top: 12px;">
+        <strong style="color: #2a8fa8;">💡 Decisão pendente:</strong>
+        <strong>Esconder a estrutura</strong> (revestir os pilares e a base, integrar
+        com o paisagismo) <strong>OU deixar aparente</strong> (pilares como elemento
+        de design, leitura clara de "casa flutuante"). Vai depender do estilo final
+        escolhido pro chalé. Possibilidades intermediárias: pintar os pilares na cor
+        da fachada, ou usar concreto aparente como acabamento.
+      </div>
+      <a class="ref-link" href="https://www.airbnb.com/l/2TjD0yVP" target="_blank" rel="noopener noreferrer">Airbnb · Estrutura aparente + cubo moderno</a>
+
+      <div class="galeria um">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_29.jpeg')">
+          <img src="imagens/foto_29.jpeg" alt="Chalé cúbico com estrutura aparente do deck">
+          <div class="img-legenda">Volume cúbico branco + madeira + estrutura aparente embaixo do deck</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">Bastante espaço de gramado em volta da casa</div>
+      <div class="ref-bloco-texto">
+        Referência de chalé com <strong>bastante espaço de gramado ao redor da casa</strong>,
+        criando uma generosa área de respiro entre a construção e o entorno. Chalé modular
+        compacto com cobertura plana, fachada com janelas amplas, palmeiras pontuais no
+        paisagismo e gramado limpo se estendendo em volta. Importante pra <strong>sensação
+        de privacidade e de imersão na natureza</strong>, especialmente em terrenos amplos
+        como a Gleba 14 (4,56 ha).
+      </div>
+      <a class="ref-link" href="https://www.airbnb.com/l/2TjD0yVP" target="_blank" rel="noopener noreferrer">Airbnb · Chalé com gramado amplo em volta</a>
+
+      <div class="galeria um">
+        <div class="img-box" onclick="abrirLightbox('imagens/foto_30.jpeg')">
+          <img src="imagens/foto_30.jpeg" alt="Chalé modular com gramado amplo em volta">
+          <div class="img-legenda">Chalé compacto + bastante gramado em volta + paisagismo pontual com palmeiras</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section id="sec6">
+    <h2 class="section-title">6. Mobiliário e Detalhes Locais</h2>
+    <p class="intro">Aproveitamento de recursos locais da fazenda na construção do mobiliário (referências cruzadas com as seções 3 e 4).</p>
+
+    <ul class="itens">
+      <li>
+        <strong>Mesa em eucalipto da fazenda</strong> (live edge, custo zero de
+        matéria-prima). Ver bloco "Mesa eucalipto + balanço no deck" na Seção 3.
+      </li>
+      <li>
+        <strong>Cadeiras em eucalipto</strong>, complementando a mesa.
+        Ver bloco "Banheira na ponta + cadeira eucalipto" na Seção 3.
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============================ SEÇÃO 7 ============================ -->
+  <section id="sec7">
+    <h2 class="section-title">7. Materiais e Economia · Acabamentos Inteligentes</h2>
+    <p class="intro">Dicas de materiais que combinam baixo custo, durabilidade e estética rústica/moderna, importantes pra viabilizar o projeto sem perder a qualidade visual.</p>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">💰 Dicas de economia em acabamentos</div>
+      <div class="ref-bloco-texto">
+        Referência com várias <strong>dicas de materiais econômicos</strong> que entregam
+        visual de alto padrão por uma fração do custo de revestimentos tradicionais.
+        Quatro aplicações principais:
+      </div>
+
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #8a6e4a; margin-top: 14px; margin-bottom: 8px;">1. Bancada em microcimento</h3>
+      <div class="ref-bloco-texto">
+        Bancada (cozinha, banheiro, lavabo) revestida com <strong>microcimento</strong> em
+        vez de granito, quartzo ou mármore. O microcimento é uma argamassa fina aplicada
+        sobre uma base existente, dá visual de concreto industrial moderno, é monolítico
+        (sem juntas), resistente à água e <strong>bem mais barato</strong> que pedras
+        naturais. Combina perfeitamente com a estética da OKA Prime e do chalé que
+        estamos projetando.
+      </div>
+
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #2a8fa8; margin-top: 14px; margin-bottom: 8px;">✅ 2. Cimento queimado no chão (aprovado!)</h3>
+      <div class="ref-bloco-texto">
+        <strong>Cimento queimado</strong> (cimento alisado e polido sobre contrapiso) como
+        piso principal do chalé. Visual <strong>industrial moderno e monolítico</strong>
+        (sem juntas, sem rejuntes), combinando perfeitamente com a bancada de microcimento
+        e a estética OKA Prime. <strong>Decisão aprovada pra usar no projeto.</strong>
+      </div>
+      <div class="ref-bloco-texto" style="background: #f0f5f7; padding: 14px 16px; border-left: 3px solid #2a8fa8; border-radius: 4px; margin-top: 8px;">
+        <strong style="color: #2a8fa8;">Vantagens do cimento queimado:</strong>
+        <ul style="list-style: none; padding-left: 0; margin-top: 8px;">
+          <li style="padding: 3px 0;">· <strong>Custo baixo</strong> (fração do porcelanato ou pedra)</li>
+          <li style="padding: 3px 0;">· <strong>Visual contínuo</strong> sem juntas ou rejuntes (igual OKA Prime)</li>
+          <li style="padding: 3px 0;">· <strong>Harmonia visual</strong> com a bancada de microcimento (mesmo "DNA" cinza concreto)</li>
+          <li style="padding: 3px 0;">· <strong>Durável e fácil de manter</strong> (basta varrer e passar pano)</li>
+          <li style="padding: 3px 0;">· <strong>Possibilidade de pigmentação</strong> (grafite, cinza claro, tom terroso)</li>
+          <li style="padding: 3px 0;">· <strong>Resina protetora opcional</strong> aumenta resistência e dá leve brilho</li>
+          <li style="padding: 3px 0;">· <strong>Térmica:</strong> não esquenta tanto quanto pedra ao sol, agradável aos pés descalços</li>
+        </ul>
+      </div>
+      <div class="ref-bloco-texto" style="margin-top: 10px;">
+        <strong>Cuidados:</strong> exige base bem nivelada, mão de obra qualificada e
+        pequenas fissuras podem aparecer (algumas pessoas consideram parte do charme,
+        outras preferem evitar com aditivos).
+      </div>
+
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #8a6e4a; margin-top: 14px; margin-bottom: 8px;">3. Piso de barro (alternativa rústica)</h3>
+      <div class="ref-bloco-texto">
+        Piso feito de <strong>barro batido ou argamassa pigmentada com tom terroso</strong>,
+        criando um acabamento rústico de tom natural. Mais quente e orgânico que o cimento
+        queimado, ideal pra áreas onde se busca aconchego rural. Custo baixíssimo.
+        Variações: <strong>terra batida estabilizada, argamassa pigmentada cor terracota,
+        ou tijolinhos de barro queimado</strong>.
+      </div>
+
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #8a6e4a; margin-top: 14px; margin-bottom: 8px;">4. Brita virando piso (com resina Holdtone)</h3>
+      <div class="ref-bloco-texto">
+        <strong>Brita / pedrisco fixado com resina</strong> tipo <strong>Holdtone</strong>
+        (ou similares: Endurit, Pavifácil, ResinBound). A pedra solta vira um piso firme,
+        permeável e com visual natural. Aplicações ideais: <strong>caminhos externos,
+        áreas de acesso, ao redor da banheira externa, no espaço da fogueira (área comum)</strong>.
+        Custa uma fração de pisos cerâmicos e mantém o caráter rústico/natural.
+      </div>
+
+      <div class="ref-bloco-texto" style="background: #f0f5f7; padding: 14px 16px; border-left: 3px solid #2a8fa8; border-radius: 4px; margin-top: 12px;">
+        <strong style="color: #2a8fa8;">💡 Aplicação no projeto:</strong>
+        <ul style="list-style: none; padding-left: 0; margin-top: 8px;">
+          <li style="padding: 4px 0;">· <strong>Microcimento:</strong> bancada da cozinha + parede atrás da cozinha (já previsto na v6) + bancada do banheiro</li>
+          <li style="padding: 4px 0;">· <strong>Cimento queimado ✅:</strong> piso principal do chalé (interno) — APROVADO, harmoniza com a bancada de microcimento</li>
+          <li style="padding: 4px 0;">· <strong>Piso de barro:</strong> alternativa rústica caso queira mudar o estilo (não combinado com cimento queimado, escolher um ou outro)</li>
+          <li style="padding: 4px 0;">· <strong>Brita com Holdtone:</strong> piso da área comum da fogueira, caminhos entre chalés, área externa da banheira</li>
+        </ul>
+      </div>
+
+      <a class="ref-link" href="https://www.instagram.com/reel/DWrIMHixPTI/" target="_blank" rel="noopener noreferrer">Instagram · Dicas de economia em materiais</a>
+    </div>
+
+    <div class="ref-bloco">
+      <div class="ref-bloco-titulo">🪵 Sobras de troncos de madeira como revestimento</div>
+      <div class="ref-bloco-texto">
+        Revestimento de parede feito com <strong>fatias / cortes transversais de troncos
+        de madeira</strong> em tamanhos variados, criando uma parede de destaque com
+        visual rústico-artesanal e textura natural impressionante. Os anéis das
+        árvores e as variações de tom entre os pedaços criam um padrão único e orgânico.
+      </div>
+      <div class="ref-bloco-texto" style="background: #f0f5f7; padding: 14px 16px; border-left: 3px solid #2a8fa8; border-radius: 4px; margin-top: 12px;">
+        <strong style="color: #2a8fa8;">💡 Por que combina com o projeto:</strong>
+        <ul style="list-style: none; padding-left: 0; margin-top: 8px;">
+          <li style="padding: 3px 0;">· <strong>Aproveitamento total:</strong> usa sobras / pedaços curtos de troncos de eucalipto da própria fazenda (mesmo conceito da mesa live edge) — <strong>custo de matéria-prima zero</strong></li>
+          <li style="padding: 3px 0;">· <strong>Sustentável:</strong> aproveita material que normalmente vai virar lenha ou ser descartado</li>
+          <li style="padding: 3px 0;">· <strong>Visual de alto impacto:</strong> impossível ter duas paredes iguais (cada pedaço é único)</li>
+          <li style="padding: 3px 0;">· <strong>Isolamento térmico e acústico:</strong> a espessura dos troncos contribui pra conforto</li>
+          <li style="padding: 3px 0;">· <strong>Combina com a estética rústica-moderna</strong> do chalé (madeira escura + branco + concreto)</li>
+        </ul>
+      </div>
+      <div class="ref-bloco-texto" style="margin-top: 10px;">
+        <strong>Aplicações no chalé:</strong>
+      </div>
+      <ul class="itens" style="margin-top: 0;">
+        <li><strong>Parede atrás da cama</strong> (cabeceira de destaque substituindo o MDF ripado da v6)</li>
+        <li><strong>Parede de entrada</strong> (recebe os hóspedes com impacto visual)</li>
+        <li><strong>Lateral da banheira freestanding</strong> (combina com a parede verde viva)</li>
+        <li><strong>Lareira / Painel de fogo</strong> (parede atrás da fogueira da área comum)</li>
+        <li><strong>Parede da varanda externa</strong> protegida sob beiral</li>
+      </ul>
+      <div class="ref-bloco-texto" style="margin-top: 10px;">
+        <strong>Cuidados:</strong> os troncos precisam estar <strong>bem secos</strong>
+        (umidade controlada antes da aplicação) pra evitar rachaduras e fissuras maiores.
+        Tratamento contra cupim com produto adequado e selante transparente pra preservar
+        o tom natural. Aplicação com cola estrutural + suporte em madeira / OSB nas
+        áreas internas.
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUMO -->
+  <section id="resumo">
+    <h2 class="section-title">Resumo das diretrizes principais</h2>
+    <table class="resumo">
+      <thead>
+        <tr>
+          <th>Tópico</th>
+          <th>Diretriz</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Planta inspiradora</td><td>Chalé Jaguatirica (Ubatuba / Pitta Arquitetura)</td></tr>
+        <tr><td>Material local</td><td>Mesa e cadeiras com eucalipto da própria fazenda</td></tr>
+        <tr><td>Fachada</td><td>Vidro inteiro + marquise decorativa + porta de correr com vidro fixo lateral</td></tr>
+        <tr><td>Pé-direito</td><td>Um pouco mais alto que o padrão</td></tr>
+        <tr><td>Telhado</td><td>Forro de madeira aparente + pedras passando lateral</td></tr>
+        <tr><td>Deck</td><td>Tábuas verticais (perpendiculares à fachada) em vez de horizontais</td></tr>
+        <tr><td>Banheira</td><td>Com deck horizontal: na ponta. Com deck vertical: pode ficar dentro do chalé (vista desimpedida)</td></tr>
+        <tr><td>Cozinha externa</td><td>Pequena pedra com torneira (minimalista)</td></tr>
+        <tr><td>Balanço</td><td>No deck (lateral ou área comum, decidir)</td></tr>
+        <tr><td>Vista</td><td>Manter mesma vista de qualquer ponto do chalé</td></tr>
+        <tr><td>Conjunto</td><td>Inspiração Villas Páramo (Costa Rica) e Monticle Glamps (Índia)</td></tr>
+        <tr><td>Cerca</td><td>Troncos verticais (palanques) como divisória</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    Documento organizado a partir do Google Docs "Chale ideias" · 17 referências · 33 imagens · Junho 2026
+  </footer>
+
+</div>
+
+<!-- Lightbox pra ampliar imagens -->
+<div class="lightbox" id="lightbox" onclick="fecharLightbox()">
+  <div class="lightbox-fechar" onclick="fecharLightbox()">×</div>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  function abrirLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('aberto');
+  }
+  function fecharLightbox() {
+    document.getElementById('lightbox').classList.remove('aberto');
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') fecharLightbox();
+  });
+</script>
+
+</body>
+</html>
